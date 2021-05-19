@@ -1864,7 +1864,7 @@ void Connection::Private::loadOutdatedUserDevices()
     });
 }
 
-void Connection::newEncryptedRoom(Room *room)
+void Connection::encryptionUpdate(Room *room)
 {
     for(const auto &user : room->users()) {
         if(!d->trackedUsers.contains(user->id())) {
